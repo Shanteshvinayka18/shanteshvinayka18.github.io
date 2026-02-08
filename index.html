@@ -590,7 +590,7 @@
 
 <!-- Navbar -->
 <nav class="navbar" id="navbar">
-    <a href="#home" class="nav-logo">Shantesh.</a>
+    <a href="#home" class="nav-logo">Shantesh Vinayka</a>
     <ul class="nav-links" id="navLinks">
         <li><a href="#home" onclick="closeNav()">Home</a></li>
         <li><a href="#about" onclick="closeNav()">About</a></li>
@@ -613,36 +613,20 @@
 
     <div class="hero-content">
         <div class="hero-text">
-            <div class="hero-greeting"></span> Hello, I'm</div>
             <h1 class="hero-name">Shantesh<br><span class="highlight">Vinayka</span></h1>
             <p class="hero-tagline">M.S. Computer Science @ Northeastern University</p>
             <div class="hero-roles">
                 <span class="role" id="roleText"></span><span class="cursor-blink">|</span>
             </div>
             <div class="hero-cta">
-                <a href="#projects" class="btn btn-primary"><i class="fas fa-rocket"></i> View Projects</a>
+                <a href="#projects" class="btn btn-outline"><i class="fas fa-rocket"></i> View Projects</a>
                 <a href="#contact" class="btn btn-outline"><i class="fas fa-envelope"></i> Contact Me</a>
-            </div>
-            <div class="hero-stats">
-                <div class="hero-stat">
-                    <div class="hero-stat-number">3+</div>
-                    <div class="hero-stat-label">Years Experience</div>
-                </div>
-                <div class="hero-stat">
-                    <div class="hero-stat-number">8+</div>
-                    <div class="hero-stat-label">Projects Built</div>
-                </div>
-                <div class="hero-stat">
-                    <div class="hero-stat-number">1</div>
-                    <div class="hero-stat-label">Published Paper</div>
-                </div>
             </div>
         </div>
         <div class="hero-image">
-        <div class="hero-image-frame">
-            <img src="photo.jpg" alt="Shantesh" style="width:100%;height:100%;object-fit:cover;">
-        </div>
-            <div class="hero-image-decoration"></div>
+            <div class="hero-image-frame">
+                <img src="photo.jpg" alt="Shantesh">
+            </div>
         </div>
     </div>
 </section>
@@ -651,7 +635,6 @@
 <section id="about">
     <div class="fade-in">
         <h2 class="section-title">About Me</h2>
-        <p class="section-subtitle">A passionate AI/ML engineer and full-stack developer, driven by curiosity and real-world impact.</p>
     </div>
     <div class="about-content fade-in">
         <div class="about-text">
@@ -682,8 +665,6 @@
 <section id="skills">
     <div class="fade-in">
         <h2 class="section-title">My Skills</h2>
-        <p class="section-subtitle">I've built AI-driven systems and full-stack applications that solve real-world problems—from multi-agent research assistants and semantic search platforms to real-time trading systems and medical imaging classifiers. My projects span machine learning, natural language processing, database design, and production deployment, with a focus on creating scalable solutions that deliver measurable impact.</p>
-    </div>
 
     <div class="skills-tabs fade-in">
         <button class="skill-tab active" data-tab="languages">Languages & Databases</button>
@@ -761,9 +742,9 @@
 <!-- ═══════════════════ PROJECTS ═══════════════════ -->
 <section id="projects">
     <div class="fade-in">
-        <div class="section-label">What I've Built</div>
         <h2 class="section-title">My Projects</h2>
-        <p class="section-subtitle">A showcase of AI-driven platforms, full-stack applications, and data engineering pipelines.</p>
+        <p class="section-subtitle">I've built AI-driven systems and full-stack applications that solve real-world problems—from multi-agent research assistants and semantic search platforms to real-time trading systems and medical imaging classifiers. My projects span machine learning, natural language processing, database design, and production deployment, with a focus on creating scalable solutions that deliver measurable impact.</p>
+.</p>
     </div>
 
     <div class="projects-grid fade-in">
@@ -774,7 +755,7 @@
             </div>
             <div class="project-body">
                 <h3>Multi-Agent RAG for Financial Analysis</h3>
-                <p>Built a LangGraph multi-agent system at NVIDIA processing quarterly reports (2020–2025) with RAG, Snowflake, and Web agents. Uses Pinecone, Mistral OCR, 3 chunking strategies, and full-stack deployment.</p>
+                <p>Built a multi-agent AI research system using LangChain and LangGraph that orchestrates three specialized agents (Pinecone RAG, Snowflake analytics, web search) to analyze NVIDIA's financial performance from 500+ quarterly reports. Deployed production system with FastAPI backend and Streamlit frontend on AWS, reducing financial research time by 87% through intelligent query routing and automated data processing.</p>
                 <div class="project-tags">
                     <span>LangGraph</span><span>Pinecone</span><span>FastAPI</span><span>Streamlit</span><span>Docker</span><span>Mistral OCR</span><span>S3</span>
                 </div>
@@ -802,7 +783,7 @@
             </div>
             <div class="project-body">
                 <h3>Live Trading Platform</h3>
-                <p>Real-time portfolio tracking system serving 50K+ users with millisecond latency. Built with FastAPI, MySQL 8.0, React+Vite, triggers/stored procedures, and Recharts visualization.</p>
+                <p>Created a full-stack real-time trading platform using FastAPI, React+Vite, and MySQL supporting 50,000+ concurrent users with millisecond-latency portfolio tracking. Architected database with 12 normalized tables using advanced SQL features (stored procedures, triggers, views) and built interactive Recharts dashboards displaying real-time profit/loss analytics and asset performance metrics.</p>
                 <div class="project-tags">
                     <span>FastAPI</span><span>MySQL</span><span>React</span><span>Vite</span><span>PyMySQL</span><span>Recharts</span>
                 </div>
@@ -816,7 +797,7 @@
             </div>
             <div class="project-body">
                 <h3>SkillMatchAI — Job Matching Platform</h3>
-                <p>Intelligent job matching using OpenAI embeddings and Pinecone search. Features Selenium web scraping from JobRight.ai, Airflow DAG orchestration, and full CI/CD deployment on AWS/GCP.</p>
+                <p>Developed an AI-powered job recommendation platform that scrapes 500+ daily job postings using Selenium and Apache Airflow, then matches candidates to opportunities through semantic search using OpenAI embeddings and Pinecone vector database. Deployed full-stack application with FastAPI backend and Streamlit frontend on GCP, serving 1,000+ weekly users with 85% match accuracy.</p>
                 <div class="project-tags">
                     <span>OpenAI</span><span>Pinecone</span><span>Selenium</span><span>Airflow</span><span>FastAPI</span><span>AWS S3</span>
                 </div>
@@ -830,7 +811,7 @@
             </div>
             <div class="project-body">
                 <h3>AI Customer Support Platform</h3>
-                <p>RAG-powered customer support achieving 92% accuracy and 40% fewer tickets. Built with React, Flask, LangChain, and GPT-4 for intelligent automated responses.</p>
+                <p>Created a conversational AI assistant using LangChain and GPT-4 with RAG-based knowledge retrieval handling 10,000+ customer queries with 92% resolution accuracy. Built production system with Flask backend and React frontend using Pinecone vector database for semantic search, reducing support ticket volume by 40%.</p>
                 <div class="project-tags">
                     <span>React</span><span>Flask</span><span>LangChain</span><span>GPT-4</span><span>RAG</span>
                 </div>
@@ -844,7 +825,7 @@
             </div>
             <div class="project-body">
                 <h3>Diabetic Retinopathy Detection</h3>
-                <p>CNN deep learning system achieving 87.5–89.7% accuracy on 92K retinal images (EyePACS/APTOS) with 5-class severity grading. Built with TensorFlow, PyTorch, and Flask web app.</p>
+                <p>Developed a CNN-based medical imaging system using TensorFlow and PyTorch to classify diabetic retinopathy severity across 92,000+ retinal fundus images from EyePACS and APTOS datasets. Implemented image preprocessing pipeline with OpenCV and deployed Flask web application serving real-time predictions with 89.7% accuracy across 5 severity classes.</p>
                 <div class="project-tags">
                     <span>CNN</span><span>TensorFlow</span><span>PyTorch</span><span>Flask</span><span>Deep Learning</span>
                 </div>
@@ -856,30 +837,40 @@
 <!-- ═══════════════════ EXPERIENCE ═══════════════════ -->
 <section id="experience">
     <div class="fade-in">
-        <div class="section-label">My Journey</div>
         <h2 class="section-title">Work Experience</h2>
         <p class="section-subtitle">A timeline of professional roles where I've built, shipped, and scaled real systems.</p>
     </div>
 
         <div class="timeline-item">
             <div class="timeline-dot"></div>
-            <div class="timeline-date">Jan 2025 – June 2025</div>
+            <div class="timeline-date">January 2025 – June 2025</div>
             <h3>Software Engineer Intern</h3>
-            <h4>DevQAExpert</h4>
-            <p>Built automated testing framework using Python processing 15,000+ test scenarios, integrating ML-based prioritization algorithms with CI/CD pipelines (Jenkins, GitHub Actions) that reduced deployment time by 35% and manual testing effort by 60%</p>
-            <p>Developed security vulnerability scanner using scikit-learn classification models detecting SQL injection and XSS threats, identifying 200+ critical issues before production deployment with 94% precision</p>
-            <p>Collaborated with 8 engineering teams through code reviews and technical documentation, achieving 99.2% test reliability across 12 production releases</p>
-        
+            <h4>DevQAExpert | India</h4>
+            <ul>
+                <li>
+                    Built automated testing framework using Python processing 15,000+ test scenarios, integrating ML-based prioritization algorithms with CI/CD pipelines (Jenkins, GitHub Actions) that reduced deployment time by 35% and manual testing effort by 60%
+                </li>
+                <li>
+                    Developed security vulnerability scanner using scikit-learn classification models detecting SQL injection and XSS threats, identifying 200+ critical issues before production deployment with 94% precision
+                </li>
+                <li>
+                    Collaborated with 8 engineering teams through code reviews and technical documentation, achieving 99.2% test reliability across 12 production releases
+                </li>
+            </ul>
         </div>
 
         <div class="timeline-item">
             <div class="timeline-dot"></div>
             <div class="timeline-date">July 2024 – December 2024</div>
             <h3>Machine Learning Intern</h3>
-            <h4>Genesis Technologies</h4>
-            <p>Designed and deployed TensorFlow CNN-based identity verification system processing 30,000+ images, improving fraud detection accuracy from 30% to 95% through systematic feature engineering and model optimization</p>
-            <p>Architected AWS Lambda data pipelines handling 1,000+ daily verification requests with 97% uptime, implementing real-time ML inference workflows that reduced processing latency by 40%</p>
-            <p>Reduced fraudulent account creation by 65% through ML-based authentication system, generating $12,000 annual cost savings and supporting 30,000+ monthly active users</p>    
+            <h4>Genesis Technologies | India</h4>
+            <ul>
+                <li>Designed and deployed TensorFlow CNN-based identity verification system processing 30,000+ images, improving fraud detection accuracy from 30% to 95% through systematic feature engineering and model optimization</li>
+
+                <li>Architected AWS Lambda data pipelines handling 1,000+ daily verification requests with 97% uptime, implementing real-time ML inference workflows that reduced processing latency by 40%</li>
+
+                <li>Reduced fraudulent account creation by 65% through ML-based authentication system, generating $12,000 annual cost savings and supporting 30,000+ monthly active users</li>
+            </ul>
         </div>
     </div>
 </section>
@@ -887,7 +878,6 @@
 <!-- ═══════════════════ CONTACT ═══════════════════ -->
 <section id="contact">
     <div class="fade-in">
-        <div class="section-label">Get In Touch</div>
         <h2 class="section-title">Contact Me</h2>
         <p class="section-subtitle">I'm actively looking for Summer 2026 internships — let's connect!</p>
     </div>
@@ -937,12 +927,8 @@
                 <input type="email" placeholder="john@example.com" required>
             </div>
             <div class="form-group">
-                <label>Subject</label>
-                <input type="text" placeholder="Summer 2026 Internship Opportunity">
-            </div>
-            <div class="form-group">
                 <label>Message</label>
-                <textarea placeholder="Hi Shantesh, I'd love to connect about..."></textarea>
+                <textarea placeholder="Type here..."></textarea>
             </div>
             <button type="submit" class="btn btn-primary" style="width:100%; justify-content:center;">
                 <i class="fas fa-paper-plane"></i> Send Message
