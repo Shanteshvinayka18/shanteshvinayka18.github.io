@@ -330,7 +330,7 @@
         }
         .education-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+            grid-template-columns: 1fr 1fr;
             gap: 28px;
         }
         .education-card {
@@ -380,37 +380,40 @@
             font-family: 'Times New Roman', Times, serif; font-weight: 500;
         }
         .skill-tab.active, .skill-tab:hover {
-            background: var(--accent-glow); border-color: var(--accent);
-            color: var(--accent-light);
+            background: var(--accent); border-color: var(--accent);
+            color: #ffffff;
         }
-        .skills-grid {
-            display: flex;
-            flex-wrap: wrap;
+        .skills-grid-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
+            gap: 18px;
+        }
+        .skill-card-box {
+            display: flex; flex-direction: column;
+            align-items: center; justify-content: center;
             gap: 14px;
-        }
-        .skill-card {
-            display: inline-flex;
-            align-items: center; gap: 10px;
-            padding: 14px 22px; border-radius: 12px;
+            padding: 28px 16px; border-radius: 14px;
             background: var(--bg-card);
             border: 1px solid var(--border);
+            box-shadow: 0 1px 4px rgba(0,0,0,0.04);
             transition: all 0.3s; cursor: default;
-            box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+            text-align: center;
         }
-        .skill-card:hover {
+        .skill-card-box:hover {
             border-color: var(--border-hover);
             transform: translateY(-4px);
             box-shadow: var(--shadow-glow);
         }
-        .skill-card img, .skill-card i {
-            width: 28px; height: 28px;
-            font-size: 1.4rem;
-            flex-shrink: 0;
+        .skill-card-box i {
+            font-size: 2rem;
         }
-        .skill-card img { object-fit: contain; }
-        .skill-card span {
-            font-size: 0.88rem; color: var(--text-secondary);
-            font-weight: 500; white-space: nowrap;
+        .skill-card-box img {
+            width: 36px; height: 36px;
+            object-fit: contain;
+        }
+        .skill-card-box span {
+            font-size: 0.88rem; color: var(--text-primary);
+            font-weight: 600;
         }
         .skills-panel { display: none; }
         .skills-panel.active { display: block; }
@@ -704,11 +707,41 @@
         }
 
         /* ── Scroll Animations ── */
+        .motto-cursor {
+            animation: mottoBlink 0.7s step-end infinite;
+            color: var(--accent);
+            font-weight: 400;
+        }
+        @keyframes mottoBlink { 50% { opacity: 0; } }
+
         .fade-in {
-            opacity: 0; transform: translateY(30px);
-            transition: opacity 0.7s ease, transform 0.7s ease;
+            opacity: 0; transform: translateY(40px);
+            transition: opacity 0.8s ease, transform 0.8s ease;
         }
         .fade-in.visible { opacity: 1; transform: translateY(0); }
+
+        .slide-in-left {
+            opacity: 0; transform: translateX(-60px);
+            transition: opacity 0.8s ease, transform 0.8s ease;
+        }
+        .slide-in-left.visible { opacity: 1; transform: translateX(0); }
+
+        .slide-in-right {
+            opacity: 0; transform: translateX(60px);
+            transition: opacity 0.8s ease, transform 0.8s ease;
+        }
+        .slide-in-right.visible { opacity: 1; transform: translateX(0); }
+
+        .slide-in-up {
+            opacity: 0; transform: translateY(50px);
+            transition: opacity 0.8s ease, transform 0.8s ease;
+        }
+        .slide-in-up.visible { opacity: 1; transform: translateY(0); }
+
+        .stagger-1 { transition-delay: 0.1s; }
+        .stagger-2 { transition-delay: 0.2s; }
+        .stagger-3 { transition-delay: 0.3s; }
+        .stagger-4 { transition-delay: 0.4s; }
 
         /* ── Mobile ── */
         @media (max-width: 900px) {
@@ -743,7 +776,7 @@
         @media (max-width: 600px) {
             .hero-name { font-size: 2.2rem; }
             .hero-stats { flex-direction: column; align-items: center; gap: 16px; }
-            .skills-grid { gap: 10px; }
+            .skills-grid-cards { grid-template-columns: repeat(auto-fill, minmax(130px, 1fr)); gap: 12px; }
         }
     </style>
 </head>
@@ -793,142 +826,148 @@
 
 <!-- ═══════════════════ ABOUT ═══════════════════ -->
 <section id="about">
-    <div class="fade-in">
+    <div class="slide-in-left">
         <h2 class="section-title">About Me</h2>
     </div>
     <div class="about-content fade-in">
-        <div class="about-photo">
+        <div class="about-photo slide-in-left stagger-1">
             <div class="about-photo-frame">
                 <img src="photo.jpg" alt="Shantesh Vinayka">
             </div>
-            <div class="about-photo-decoration"></div>
         </div>
-        <div class="about-text">
+        <div class="about-text slide-in-right stagger-2">
             <p>Hi, I'm Shantesh, a Computer Science graduate student at Northeastern University focused on Data Science and AI. I build things that sit at the intersection of intelligent systems and real-world problems from multi-agent AI pipelines and deep learning models to production APIs and scalable cloud deployments. I am not driven just by the tech itself, but with the moment that something I've built actually helps someone make a better decision or saves them hours of work they shouldn't have been doing in the first place. I prototype fast, learn from what breaks, and ship things that hold up.</p>
+            <p style="font-weight: 700; font-size: 1.15rem; margin-top: 20px; color: var(--text-primary);">
+                <span id="mottoText"></span><span class="motto-cursor">|</span>
+            </p>
         </div>
     </div>
 </section>
 
 <!-- ═══════════════════ EDUCATION ═══════════════════ -->
 <section id="education">
-    <div class="fade-in">
+    <div class="slide-in-left">
         <h2 class="section-title">Education</h2>
         <div class="section-title-underline"></div>
     </div>
 
-    <div class="education-grid fade-in">
-        <div class="education-card">
-            <div class="education-icon">
-                <i class="fas fa-graduation-cap"></i>
-            </div>
-            <h3>M.S. in Computer Science</h3>
-            <p class="education-university">Northeastern University, Boston, MA</p>
-            <p class="education-details">Data Science & AI Focus | GPA: 3.7/4 | Expected April 2027</p>
-        </div>
-
+    <div class="education-grid slide-in-up stagger-2">
         <div class="education-card">
             <div class="education-icon">
                 <i class="fas fa-university"></i>
             </div>
             <h3>B.Tech in Computer Science</h3>
             <p class="education-university">Medi-Caps University, Indore, India</p>
-            <p class="education-details">GPA: 3.7/4 | Graduated June 2024</p>
+            <p class="education-details">Graduated June 2025</p>
+        </div>
+
+        <div class="education-card">
+            <div class="education-icon">
+                <i class="fas fa-graduation-cap"></i>
+            </div>
+            <h3>M.S. in Computer Science</h3>
+            <p class="education-university">Northeastern University, Boston, MA</p>
+            <p class="education-details">Data Science & AI Focus | Expected December 2027</p>
         </div>
     </div>
 </section>
 
 <!-- ═══════════════════ SKILLS ═══════════════════ -->
 <section id="skills">
-    <div class="fade-in">
-        <h2 class="section-title">My Skills</h2>
+    <div class="slide-in-left" style="text-align: center;">
+        <div class="section-title-underline" style="margin: 0 auto 12px;"></div>
+        <h2 class="section-title" style="text-align: center;">Skills</h2>
+        <p class="section-subtitle" style="text-align: center; margin: 0 auto 40px;">Technical Proficiency</p>
+    </div>
 
-    <div class="skills-tabs fade-in">
-        <button class="skill-tab active" data-tab="languages">Languages & Databases</button>
-        <button class="skill-tab" data-tab="aiml">AI / ML</button>
+    <div class="skills-tabs slide-in-up stagger-1" style="justify-content: center;">
+        <button class="skill-tab active" data-tab="genai">Generative AI</button>
+        <button class="skill-tab" data-tab="languages">Programming Languages & Database</button>
         <button class="skill-tab" data-tab="frameworks">Frameworks & Libraries</button>
-        <button class="skill-tab" data-tab="cloud">Cloud & DevOps</button>
+        <button class="skill-tab" data-tab="cloud">Cloud Platforms</button>
         <button class="skill-tab" data-tab="tools">Tools</button>
     </div>
 
-    <div id="languages" class="skills-panel active fade-in">
-        <div class="skills-grid">
-            <div class="skill-card"><i class="fab fa-python" style="color:#3776AB"></i><span>Python</span></div>
-            <div class="skill-card"><i class="fab fa-js-square" style="color:#F7DF1E"></i><span>JavaScript</span></div>
-            <div class="skill-card"><i class="fas fa-code" style="color:#00599C"></i><span>C++</span></div>
-            <div class="skill-card"><i class="fas fa-database" style="color:#4479A1"></i><span>SQL</span></div>
-            <div class="skill-card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="MySQL"><span>MySQL</span></div>
-            <div class="skill-card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" alt="PostgreSQL"><span>PostgreSQL</span></div>
-            <div class="skill-card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" alt="MongoDB"><span>MongoDB</span></div>
-            <div class="skill-card"><i class="fas fa-tree" style="color:#00d4aa"></i><span>Pinecone</span></div>
+    <div id="genai" class="skills-panel active fade-in">
+        <div class="skills-grid-cards">
+            <div class="skill-card-box"><i class="fas fa-brain" style="color:#4f46e5"></i><span>Transformer Models (GPT, T5, BERT)</span></div>
+            <div class="skill-card-box"><i class="fas fa-robot" style="color:#4f46e5"></i><span>RAG</span></div>
+            <div class="skill-card-box"><i class="fas fa-link" style="color:#4f46e5"></i><span>LangChain</span></div>
+            <div class="skill-card-box"><i class="fas fa-project-diagram" style="color:#4f46e5"></i><span>LangGraph</span></div>
+            <div class="skill-card-box"><i class="fas fa-server" style="color:#4f46e5"></i><span>MCP Server</span></div>
+            <div class="skill-card-box"><i class="fas fa-keyboard" style="color:#4f46e5"></i><span>Prompt Engineering</span></div>
+            <div class="skill-card-box"><i class="fas fa-smile-beam" style="color:#4f46e5"></i><span>Hugging Face</span></div>
+            <div class="skill-card-box"><i class="fas fa-cube" style="color:#4f46e5"></i><span>OpenAI Embeddings</span></div>
+            <div class="skill-card-box"><i class="fas fa-magic" style="color:#4f46e5"></i><span>Mistral OCR</span></div>
+            <div class="skill-card-box"><i class="fas fa-eye" style="color:#4f46e5"></i><span>Computer Vision</span></div>
+            <div class="skill-card-box"><i class="fas fa-network-wired" style="color:#4f46e5"></i><span>CNN / Deep Learning</span></div>
         </div>
     </div>
 
-    <div id="aiml" class="skills-panel fade-in">
-        <div class="skills-grid">
-            <div class="skill-card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tensorflow/tensorflow-original.svg" alt="TensorFlow"><span>TensorFlow</span></div>
-            <div class="skill-card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pytorch/pytorch-original.svg" alt="PyTorch"><span>PyTorch</span></div>
-            <div class="skill-card"><i class="fas fa-smile-beam" style="color:#ffd21e"></i><span>Hugging Face</span></div>
-            <div class="skill-card"><i class="fas fa-link" style="color:#6c63ff"></i><span>LangChain</span></div>
-            <div class="skill-card"><i class="fas fa-project-diagram" style="color:#a855f7"></i><span>LangGraph</span></div>
-            <div class="skill-card"><i class="fas fa-robot" style="color:#00d4aa"></i><span>RAG Systems</span></div>
-            <div class="skill-card"><i class="fas fa-language" style="color:#ec4899"></i><span>NLP / BERT / GPT</span></div>
-            <div class="skill-card"><i class="fas fa-eye" style="color:#f59e0b"></i><span>Computer Vision</span></div>
-            <div class="skill-card"><i class="fas fa-cube" style="color:#6c63ff"></i><span>OpenAI Embeddings</span></div>
-            <div class="skill-card"><i class="fas fa-magic" style="color:#00d4aa"></i><span>Mistral OCR</span></div>
-            <div class="skill-card"><i class="fas fa-network-wired" style="color:#a855f7"></i><span>CNN / Deep Learning</span></div>
+    <div id="languages" class="skills-panel fade-in">
+        <div class="skills-grid-cards">
+            <div class="skill-card-box"><i class="fab fa-python" style="color:#4f46e5"></i><span>Python</span></div>
+            <div class="skill-card-box"><i class="fab fa-js-square" style="color:#4f46e5"></i><span>JavaScript</span></div>
+            <div class="skill-card-box"><i class="fas fa-code" style="color:#4f46e5"></i><span>C++</span></div>
+            <div class="skill-card-box"><i class="fas fa-database" style="color:#4f46e5"></i><span>SQL</span></div>
+            <div class="skill-card-box"><i class="fas fa-database" style="color:#4f46e5"></i><span>MySQL</span></div>
+            <div class="skill-card-box"><i class="fas fa-database" style="color:#4f46e5"></i><span>PostgreSQL</span></div>
+            <div class="skill-card-box"><i class="fas fa-leaf" style="color:#4f46e5"></i><span>MongoDB</span></div>
+            <div class="skill-card-box"><i class="fas fa-tree" style="color:#4f46e5"></i><span>Pinecone</span></div>
         </div>
-
     </div>
 
     <div id="frameworks" class="skills-panel fade-in">
-        <div class="skills-grid">
-            <div class="skill-card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React"><span>React</span></div>
-            <div class="skill-card"><i class="fas fa-bolt" style="color:#009688"></i><span>FastAPI</span></div>
-            <div class="skill-card"><i class="fab fa-python" style="color:#0d7963"></i><span>Flask</span></div>
-            <div class="skill-card"><i class="fas fa-water" style="color:#ff6b35"></i><span>Streamlit</span></div>
-            <div class="skill-card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="Node.js"><span>Node.js</span></div>
-            <div class="skill-card"><i class="fas fa-chart-bar" style="color:#6c63ff"></i><span>Pandas</span></div>
-            <div class="skill-card"><i class="fas fa-calculator" style="color:#4DABCF"></i><span>NumPy</span></div>
-            <div class="skill-card"><i class="fas fa-spider" style="color:#f59e0b"></i><span>Selenium</span></div>
-            <div class="skill-card"><i class="fas fa-feather" style="color:#00d4aa"></i><span>spaCy</span></div>
+        <div class="skills-grid-cards">
+            <div class="skill-card-box"><i class="fab fa-react" style="color:#4f46e5"></i><span>React</span></div>
+            <div class="skill-card-box"><i class="fas fa-bolt" style="color:#4f46e5"></i><span>FastAPI</span></div>
+            <div class="skill-card-box"><i class="fab fa-python" style="color:#4f46e5"></i><span>Flask</span></div>
+            <div class="skill-card-box"><i class="fas fa-water" style="color:#4f46e5"></i><span>Streamlit</span></div>
+            <div class="skill-card-box"><i class="fab fa-node-js" style="color:#4f46e5"></i><span>Node.js</span></div>
+            <div class="skill-card-box"><i class="fas fa-chart-bar" style="color:#4f46e5"></i><span>Pandas</span></div>
+            <div class="skill-card-box"><i class="fas fa-calculator" style="color:#4f46e5"></i><span>NumPy</span></div>
+            <div class="skill-card-box"><i class="fas fa-spider" style="color:#4f46e5"></i><span>Selenium</span></div>
+            <div class="skill-card-box"><i class="fas fa-feather" style="color:#4f46e5"></i><span>spaCy</span></div>
+            <div class="skill-card-box"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tensorflow/tensorflow-original.svg" alt="TensorFlow"><span>TensorFlow</span></div>
+            <div class="skill-card-box"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pytorch/pytorch-original.svg" alt="PyTorch"><span>PyTorch</span></div>
         </div>
     </div>
 
     <div id="cloud" class="skills-panel fade-in">
-        <div class="skills-grid">
-            <div class="skill-card"><i class="fab fa-aws" style="color:#FF9900"></i><span>AWS (S3, Lambda, EC2)</span></div>
-            <div class="skill-card"><i class="fab fa-google" style="color:#4285F4"></i><span>GCP</span></div>
-            <div class="skill-card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" alt="Docker"><span>Docker</span></div>
-            <div class="skill-card"><i class="fas fa-snowflake" style="color:#29B5E8"></i><span>Snowflake</span></div>
-            <div class="skill-card"><i class="fas fa-sync-alt" style="color:#00d4aa"></i><span>CI/CD Pipelines</span></div>
-            <div class="skill-card"><i class="fas fa-wind" style="color:#017cee"></i><span>Apache Airflow</span></div>
+        <div class="skills-grid-cards">
+            <div class="skill-card-box"><i class="fab fa-aws" style="color:#4f46e5"></i><span>AWS (S3, Lambda, EC2)</span></div>
+            <div class="skill-card-box"><i class="fab fa-google" style="color:#4f46e5"></i><span>GCP</span></div>
+            <div class="skill-card-box"><i class="fab fa-docker" style="color:#4f46e5"></i><span>Docker</span></div>
+            <div class="skill-card-box"><i class="fas fa-snowflake" style="color:#4f46e5"></i><span>Snowflake</span></div>
+            <div class="skill-card-box"><i class="fas fa-sync-alt" style="color:#4f46e5"></i><span>CI/CD Pipelines</span></div>
+            <div class="skill-card-box"><i class="fas fa-wind" style="color:#4f46e5"></i><span>Apache Airflow</span></div>
         </div>
     </div>
 
     <div id="tools" class="skills-panel fade-in">
-        <div class="skills-grid">
-            <div class="skill-card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git"><span>Git</span></div>
-            <div class="skill-card"><i class="fas fa-paper-plane" style="color:#FF6C37"></i><span>Postman</span></div>
-            <div class="skill-card"><i class="fas fa-chart-line" style="color:#E97627"></i><span>Recharts</span></div>
-            <div class="skill-card"><i class="fab fa-linux" style="color:#FCC624"></i><span>Linux</span></div>
-            <div class="skill-card"><i class="fas fa-vial" style="color:#6c63ff"></i><span>Pytest</span></div>
-            <div class="skill-card"><i class="fas fa-terminal" style="color:#00d4aa"></i><span>Bash Scripting</span></div>
+        <div class="skills-grid-cards">
+            <div class="skill-card-box"><i class="fab fa-git-alt" style="color:#4f46e5"></i><span>Git</span></div>
+            <div class="skill-card-box"><i class="fas fa-paper-plane" style="color:#4f46e5"></i><span>Postman</span></div>
+            <div class="skill-card-box"><i class="fas fa-chart-line" style="color:#4f46e5"></i><span>Recharts</span></div>
+            <div class="skill-card-box"><i class="fab fa-linux" style="color:#4f46e5"></i><span>Linux</span></div>
+            <div class="skill-card-box"><i class="fas fa-vial" style="color:#4f46e5"></i><span>Pytest</span></div>
+            <div class="skill-card-box"><i class="fas fa-terminal" style="color:#4f46e5"></i><span>Bash Scripting</span></div>
         </div>
     </div>
 </section>
 
 <!-- ═══════════════════ PROJECTS ═══════════════════ -->
 <section id="projects">
-    <div class="fade-in">
+    <div class="slide-in-left">
         <h2 class="section-title">My Projects</h2>
         <p class="section-subtitle">I've built AI-driven systems and full-stack applications that solve real-world problems—from multi-agent research assistants and semantic search platforms to real-time trading systems and medical imaging classifiers. My projects span machine learning, natural language processing, database design, and production deployment, with a focus on creating scalable solutions that deliver measurable impact.</p>
     </div>
 
-    <div class="projects-grid fade-in">
+    <div class="projects-grid slide-in-up stagger-2">
         <!-- Project 1: NVIDIA Multi-Agent RAG -->
         <div class="project-card">
             <div class="project-header">
-                <div class="project-icon"></div>
+                <div class="project-icon"><i class="fas fa-chart-line"></i></div>
                 <div class="project-links">
                     <a href="https://github.com/Shanteshvinayka18/NVIDIA_Research_Assistant.git" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
                 </div>
@@ -945,7 +984,7 @@
         <!-- Project 2: Real Estate AI -->
         <div class="project-card">
             <div class="project-header">
-                <div class="project-icon"></div>
+                <div class="project-icon"><i class="fas fa-building"></i></div>
                 <div class="project-links">
                     <a href="https://github.com/Shanteshvinayka18/real-estate-project.git" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
                 </div>
@@ -962,7 +1001,7 @@
         <!-- Project 3: Live Trading Platform -->
         <div class="project-card">
             <div class="project-header">
-                <div class="project-icon"></div>
+                <div class="project-icon"><i class="fas fa-chart-area"></i></div>
                 <div class="project-links">
                     <a href="https://github.com/Shanteshvinayka18/Full-Stack-Live-Update-trading-project.git" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
                 </div>
@@ -979,7 +1018,7 @@
         <!-- Project 4: SkillMatchAI -->
         <div class="project-card">
             <div class="project-header">
-                <div class="project-icon"></i></div>
+                <div class="project-icon"><i class="fas fa-briefcase"></i></div>
                 <div class="project-links">
                     <a href="https://github.com/Shanteshvinayka18/SkillMatchAI.git" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
                 </div>
@@ -996,7 +1035,7 @@
         <!-- Project 5: AI Customer Support -->
         <div class="project-card">
             <div class="project-header">
-                <div class="project-icon"></div>
+                <div class="project-icon"><i class="fas fa-headset"></i></div>
                 <div class="project-links">
                     <a href="https://github.com/Shanteshvinayka18" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
                 </div>
@@ -1013,7 +1052,7 @@
         <!-- Project 6: Diabetic Retinopathy -->
         <div class="project-card">
             <div class="project-header">
-                <div class="project-icon"></div>
+                <div class="project-icon"><i class="fas fa-eye"></i></div>
                 <div class="project-links">
                     <a href="https://github.com/Shanteshvinayka18/Diabetic-Retinopathy-Classification.git" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
                 </div>
@@ -1031,11 +1070,11 @@
 
 <!-- ═══════════════════ EXPERIENCE ═══════════════════ -->
 <section id="experience">
-    <div class="fade-in">
+    <div class="slide-in-left">
         <h2 class="section-title">Work Experience</h2>
     </div>
 
-    <div class="timeline fade-in">
+    <div class="timeline slide-in-right stagger-2">
         <div class="timeline-item">
             <div class="timeline-dot"></div>
             <div class="timeline-date">January 2025 – June 2025</div>
@@ -1072,12 +1111,12 @@
 
 <!-- ═══════════════════ RESEARCH PUBLICATIONS ═══════════════════ -->
 <section id="research">
-    <div class="fade-in">
+    <div class="slide-in-left">
         <h2 class="section-title">Research Publications</h2>
         <p class="section-subtitle">Published research exploring the intersection of NLP, speech processing, and human-computer interaction.</p>
     </div>
 
-    <div class="publications-grid fade-in">
+    <div class="publications-grid slide-in-up stagger-2">
         <div class="publication-card">
             <div class="publication-icon"><i class="fas fa-file-alt"></i></div>
             <h3>Enhancing Human-Robot Interaction Through Advanced Natural Language Processing Techniques</h3>
@@ -1105,12 +1144,12 @@
 
 <!-- ═══════════════════ CONTACT ═══════════════════ -->
 <section id="contact">
-    <div class="fade-in">
+    <div class="slide-in-left">
         <h2 class="section-title">Contact Me</h2>
         <p class="section-subtitle">I'm actively looking for Summer 2026 internships — let's connect!</p>
     </div>
 
-    <div class="contact-content fade-in">
+    <div class="contact-content slide-in-up stagger-2">
         <div class="contact-info">
             <p>Whether you're a recruiter, a fellow engineer, or just want to chat about AI and tech, I'd love to hear from you. I'm open to opportunities in AI/ML Engineering, Software Engineering, and Data Science.</p>
 
@@ -1253,8 +1292,31 @@
         });
     }, { threshold: 0.1 });
 
-    document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+    document.querySelectorAll('.fade-in, .slide-in-left, .slide-in-right, .slide-in-up').forEach(el => observer.observe(el));
+
+    // ── Motto Typing Effect ──
+    const mottoEl = document.getElementById('mottoText');
+    if (mottoEl) {
+        const motto = 'Aim. Work. Achieve.';
+        let mi = 0;
+        function typeMotto() {
+            if (mi <= motto.length) {
+                mottoEl.textContent = motto.substring(0, mi);
+                mi++;
+                setTimeout(typeMotto, 80);
+            }
+        }
+        // Start typing when the about section becomes visible
+        const mottoObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    typeMotto();
+                    mottoObserver.disconnect();
+                }
+            });
+        }, { threshold: 0.3 });
+        mottoObserver.observe(mottoEl.closest('.about-content') || mottoEl);
+    }
 </script>
 </body>
 </html>
-
