@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=12,9,5&height=220&section=header&text=Welcome%20to%20My%20AI%20Portfolio&fontSize=42&fontColor=ffffff&animation=fadeIn&fontAlignY=38&desc=Shantesh%20Vinayka%20|%20AI/ML%20Engineer%20|%20Software%20Engineer&descSize=16&descAlignY=58&descColor=ffffff" width="100%"/>
+<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=12,9,5&height=220&section=header&text=Welcome%20to%20My%20AI%20Portfolio&fontSize=42&fontColor=ffffff&animation=fadeIn&%20AI/ML%20Engineer%20|%20Software%20Engineer&descSize=16&descAlignY=58&descColor=ffffff" width="100%"/>
 
 <a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&weight=600&size=22&pause=1000&color=2563EB&center=true&vCenter=true&random=false&width=600&lines=Building+LLM+Systems+%26+Multi-Agent+AI;Full-Stack+Developer+%7C+Data+Scientist;M.S.+Computer+Science+%40+Northeastern;Aim.+Work.+Achieve." alt="Typing SVG" /></a>
 
