@@ -1,10 +1,10 @@
 <div align="center">
 
-# Hi, I'm Shantesh Vinayka 👋
+<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=12,9,5&height=220&section=header&text=Welcome%20to%20My%20AI%20Portfolio&fontSize=42&fontColor=ffffff&animation=fadeIn&fontAlignY=38&desc=Shantesh%20Vinayka%20|%20AI/ML%20Engineer%20|%20Software%20Engineer&descSize=16&descAlignY=58&descColor=ffffff" width="100%"/>
 
-### AI/ML Engineer · Data Scientist
+<a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&weight=600&size=22&pause=1000&color=2563EB&center=true&vCenter=true&random=false&width=600&lines=Building+LLM+Systems+%26+Multi-Agent+AI;Full-Stack+Developer+%7C+Data+Scientist;M.S.+Computer+Science+%40+Northeastern;Aim.+Work.+Achieve." alt="Typing SVG" /></a>
 
-[![Portfolio](https://img.shields.io/badge/Portfolio-000?style=for-the-badge&logo=vercel&logoColor=white)](https://shanteshvinayka18.github.io/shanteshvinayka18/)
+[![Portfolio](https://img.shields.io/badge/Portfolio-000?style=for-the-badge&logo=vercel&logoColor=white)](https://shanteshvinayka18.github.io)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/shantesh-vinayka/)
 [![Email](https://img.shields.io/badge/Email-EA4335?style=for-the-badge&logo=gmail&logoColor=white)](mailto:vinayka.s@northeastern.edu)
 
@@ -12,17 +12,18 @@
 
 ---
 
-### 🧑‍💻 About Me
+## About Me
 
-- 🎓 **M.S. in Computer Science** @ Northeastern University, Boston *(Expected Dec 2027)*
-- 🎓 **B.Tech in Computer Science** @ Medi-Caps University, India *(June 2025)*
+- **M.S. in Computer Science** @ Northeastern University, Boston *(Expected Dec 2027)*
+- **B.Tech in Computer Science** @ Medi-Caps University, India *(June 2025)*
 - Exploring **LangGraph, MCP Servers, and Advanced Prompt Engineering**
 - Published researcher in **NLP & Human-Robot Interaction** ([IJSREM](https://ijsrem.com/download/enhancing-human-robot-interaction-through-advanced-natural-language-processing-techniques/))
-
+- 🏐 Former **National Volleyball Team Captain** & Certified Referee
+- ⚡ **Aim. Work. Achieve.**
 
 ---
 
-### 🛠️ Tech Stack
+## Tech Stack
 
 **Languages & Databases**
 
@@ -66,7 +67,7 @@
 
 ---
 
-### 🚀 Featured Projects
+## Featured Projects
 
 | Project | Description | Tech |
 |---------|-------------|------|
@@ -76,17 +77,19 @@
 | [**SkillMatchAI**](https://github.com/Shanteshvinayka18/SkillMatchAI) | AI job matching platform with 85% accuracy using semantic search | OpenAI, Pinecone, Selenium, Airflow |
 | [**Diabetic Retinopathy**](https://github.com/Shanteshvinayka18/Diabetic-Retinopathy-Classification) | CNN-based medical imaging with 89.7% accuracy on 92K+ images | TensorFlow, PyTorch, OpenCV, Flask |
 
-### 💼 Experience
+
+
+## Experience
 
 - **Software Engineer Intern** @ DevQAExpert *(Jan – Jun 2025)* — Built testing frameworks processing 15K+ scenarios, reduced deployment time by 35%
 - **Machine Learning Intern** @ Genesis Technologies *(Jul – Dec 2024)* — Improved fraud detection from 30% to 95%, serving 30K+ users
 
 ---
 
-### 📄 Research Publications
+## Research Publications
 
-- 📝 [**Enhancing Human-Robot Interaction Through Advanced NLP**](https://ijsrem.com/download/enhancing-human-robot-interaction-through-advanced-natural-language-processing-techniques/) — *IJSREM*
-- 🎙️ **Sentiment Analysis with Speech Recognition** — LSTM-based system with 90%+ accuracy — *Medi-Caps University*
+- [**Enhancing Human-Robot Interaction Through Advanced NLP**](https://ijsrem.com/download/enhancing-human-robot-interaction-through-advanced-natural-language-processing-techniques/) — *IJSREM*
+-  **Sentiment Analysis with Speech Recognition** — LSTM-based system with 90%+ accuracy — *Medi-Caps University*
 
 ---
 
@@ -94,6 +97,6 @@
 
 ![Visitor Count](https://komarev.com/ghpvc/?username=Shanteshvinayka18&color=2563EB&style=flat-square&label=Profile+Views)
 
-*"Aim. Work. Achieve."*
+<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=12,9,5&height=120&section=footer" width="100%"/>
 
 </div>
