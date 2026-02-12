@@ -76,21 +76,6 @@
 | [**SkillMatchAI**](https://github.com/Shanteshvinayka18/SkillMatchAI) | AI job matching platform with 85% accuracy using semantic search | OpenAI, Pinecone, Selenium, Airflow |
 | [**Diabetic Retinopathy**](https://github.com/Shanteshvinayka18/Diabetic-Retinopathy-Classification) | CNN-based medical imaging with 89.7% accuracy on 92K+ images | TensorFlow, PyTorch, OpenCV, Flask |
 
----
-
-### 📊 GitHub Stats
-
-<div align="center">
-
-<img src="https://github-readme-stats.vercel.app/api?username=Shanteshvinayka18&show_icons=true&theme=tokyonight&hide_border=true&bg_color=0D1117&title_color=2563EB&icon_color=3B82F6&text_color=C9D1D9" height="170"/>
-<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Shanteshvinayka18&layout=compact&theme=tokyonight&hide_border=true&bg_color=0D1117&title_color=2563EB&text_color=C9D1D9" height="170"/>
-
-<img src="https://github-readme-streak-stats.herokuapp.com/?user=Shanteshvinayka18&theme=tokyonight&hide_border=true&background=0D1117&ring=2563EB&fire=3B82F6&currStreakLabel=2563EB" />
-
-</div>
-
----
-
 ### 💼 Experience
 
 - **Software Engineer Intern** @ DevQAExpert *(Jan – Jun 2025)* — Built testing frameworks processing 15K+ scenarios, reduced deployment time by 35%
